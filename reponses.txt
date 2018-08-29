@@ -1,0 +1,50 @@
+2.3. Il ne dit pas bonjour
+
+le fait d'ajouter un "#" devant la ligne 2 crée une erreur de syntaxe.
+Après la première string il y a une "," donc l'ordinateur s'attend à voir une suite mais le "#" en ruby a comme propriété de mettre le texte en commentaire, c'est comme si il ni avait rien a executer pour lui.
+
+
+2.4. Ça marche pô 😢
+
+netrestore-a8206613d6e1:thp reaualexis$ ruby exo_04.rb
+exo_04.rb:1: unterminated string meets end of file
+
+Il manque le " fermant du string, le code est donc illisible pour l'ordinateur car il ne sait pas quand termine ma phrase. 
+il faut donc en ajouter un pour que le code fonctionne.
+
+
+2.5. Opérations
+"#{}" est un opérateur utilisé pour isoler et interpoler un morceau de code à l'intérieur des chaînes à double guillemet.
+
+
+2.6. Variables
+
+netrestore-a8206613d6e1:ruby-thp reaualexis$ ruby exo_06.rb
+Travail : 550
+exo_06.rb:7:in `<main>': undefined local variable or method `number_of_minutes_in_an_hour' for main:Object (NameError)
+Did you mean?  number_of_weeks_in_THP
+
+La variable "number_of_minutes_in_an_hour" n'ayant pas été défini au préalable, l'ordinateur ne peut pas effectuer l'opération convenablement.
+
+
+2.7. Demander à l'utilisateur
+
+"gets.chomp" permet à l'utilisateur d'entrer une ligne et la renvoie sous forme de valeur au programme.
+Appeler chomp sur cette valeur supprime la rupture de ligne.
+
+netrestore-a8206613d6e1:ruby-thp reaualexis$ ruby exo_07_a.rb
+Bonjour, c'est quoi ton blase ?
+alexis
+alexis
+netrestore-a8206613d6e1:ruby-thp reaualexis$ ruby exo_07_b.rb
+Bonjour, c'est quoi ton blase ?
+> alexis
+alexis
+netrestore-a8206613d6e1:ruby-thp reaualexis$ ruby exo_07_c.rb
+alexis
+alexis
+
+Ces trois programmes ont le même objectif : demander à l'utilisateur d'écrire son blase.
+Leur différence réside dans le fait qu'ils sont plus au moins claire.
+En effet le programme "exo_07_c.rb" ne pose même pas la question.
+Alors que "exo_07_b.rb" incite bien plus à une interaction car on sait ce qu'il nous ai demandé et le "> " montre que le programme est en attente d'une réponse contrairement à "exo_07_a.rb".
